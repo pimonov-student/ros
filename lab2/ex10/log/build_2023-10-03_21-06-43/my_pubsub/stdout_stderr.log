@@ -1,0 +1,9 @@
+[35m[1mConsolidate compiler generated dependencies of target control[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o[0m
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:[m[K In constructor ‘[01m[KMyNode::MyNode()[m[K’:
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:21:36:[m[K [01;31m[Kerror: [m[K‘[01m[KMinimalSubscriber[m[K’ has not been declared
+   21 |                         std::bind(&[01;31m[KMinimalSubscriber[m[K::topic_callback, this, _1));
+      |                                    [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/control.dir/build.make:76: CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,24 @@
+[0.029s] Invoking command in '/home/apim/my_pubsub_ws/build/my_pubsub': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12
+[0.053s] [35m[1mConsolidate compiler generated dependencies of target control[0m
+[0.062s] [ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o[0m
+[1.386s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:[m[K In constructor ‘[01m[KMyNode::MyNode()[m[K’:
+[1.386s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:21:36:[m[K [01;31m[Kerror: [m[K‘[01m[KMinimalSubscriber[m[K’ has not been declared
+[1.386s]    21 |                         std::bind(&[01;31m[KMinimalSubscriber[m[K::topic_callback, this, _1));
+[1.386s]       |                                    [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.386s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:[m[K In member function ‘[01m[Kvoid MyNode::topic_callback(const String&)[m[K’:
+[1.386s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:27:24:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+[1.386s]    27 |                 if (msg[01;31m[K->[m[Kdata.c_str() == "turn_right")
+[1.387s]       |                        [01;31m[K^~[m[K
+[1.387s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:31:29:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+[1.387s]    31 |                 else if (msg[01;31m[K->[m[Kdata.c_str() == "turn_left")
+[1.387s]       |                             [01;31m[K^~[m[K
+[1.387s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:35:29:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+[1.387s]    35 |                 else if (msg[01;31m[K->[m[Kdata.c_str() == "move_forward")
+[1.387s]       |                             [01;31m[K^~[m[K
+[1.387s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:39:29:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+[1.387s]    39 |                 else if (msg[01;31m[K->[m[Kdata.c_str() == "move_backward")
+[1.387s]       |                             [01;31m[K^~[m[K
+[1.829s] gmake[2]: *** [CMakeFiles/control.dir/build.make:76: CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o] Error 1
+[1.829s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control.dir/all] Error 2
+[1.829s] gmake: *** [Makefile:146: all] Error 2
+[1.830s] Invoked command in '/home/apim/my_pubsub_ws/build/my_pubsub' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12

@@ -1,0 +1,22 @@
+[0.039s] Invoking command in '/home/apim/my_pubsub_ws/build/my_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12
+[0.062s] [35m[1mConsolidate compiler generated dependencies of target control[0m
+[0.071s] [ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o[0m
+[1.367s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:[m[K In constructor ‘[01m[KMyNode::MyNode()[m[K’:
+[1.367s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:15:66:[m[K [01;31m[Kerror: [m[K‘[01m[K_1[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::placeholders::_1[m[K’?
+[1.367s]    15 |                         std::bind(&MyNode::topic_callback, this, [01;31m[K_1[m[K));
+[1.367s]       |                                                                  [01;31m[K^~[m[K
+[1.367s]       |                                                                  [32m[Kstd::placeholders::_1[m[K
+[1.367s] In file included from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[1.367s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[1.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[1.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.367s]                  from [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:1[m[K:
+[1.367s] [01m[K/usr/include/c++/11/functional:225:34:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::placeholders::_1[m[K’ declared here
+[1.367s]   225 |     extern const _Placeholder<1> [01;36m[K_1[m[K;
+[1.367s]       |                                  [01;36m[K^~[m[K
+[1.809s] gmake[2]: *** [CMakeFiles/control.dir/build.make:76: CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o] Error 1
+[1.809s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control.dir/all] Error 2
+[1.809s] gmake: *** [Makefile:146: all] Error 2
+[1.811s] Invoked command in '/home/apim/my_pubsub_ws/build/my_pubsub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12

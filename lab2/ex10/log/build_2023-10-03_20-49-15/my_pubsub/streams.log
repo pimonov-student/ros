@@ -1,0 +1,120 @@
+[0.030s] Invoking command in '/home/apim/my_pubsub_ws/build/my_pubsub': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12
+[0.052s] [35m[1mConsolidate compiler generated dependencies of target control[0m
+[0.062s] [ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o[0m
+[1.370s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:[m[K In constructor ‘[01m[KMyNode::MyNode()[m[K’:
+[1.370s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:16:53:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+[1.370s]    16 |                 publisher_ = this->create_publisher<[01;31m[Kmsg[m[K::Twist>(
+[1.370s]       |                                                     [01;31m[K^~~[m[K
+[1.370s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:16:53:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[1.370s] In file included from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:7[m[K,
+[1.370s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.371s]                  from [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:5[m[K:
+[1.371s] [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+[1.371s]    27 | namespace [01;36m[Kmsg[m[K
+[1.371s]       |           [01;36m[K^~~[m[K
+[1.371s] In file included from [01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:7[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:28[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:30[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:45[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[1.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.372s]                  from [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:5[m[K:
+[1.372s] [01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+[1.372s]    27 | namespace [01;36m[Kmsg[m[K
+[1.372s]       |           [01;36m[K^~~[m[K
+[1.372s] In file included from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:23[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.372s]                  from [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:5[m[K:
+[1.372s] [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+[1.372s]    27 | namespace [01;36m[Kmsg[m[K
+[1.373s]       |           [01;36m[K^~~[m[K
+[1.373s] In file included from [01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp:7[m[K,
+[1.373s]                  from [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:6[m[K:
+[1.373s] [01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+[1.373s]    27 | namespace [01;36m[Kmsg[m[K
+[1.373s]       |           [01;36m[K^~~[m[K
+[1.373s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:16:36:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[1.373s]    16 |                 publisher_ = this->[01;31m[Kcreate_publisher<msg::Twist>[m[K(
+[1.373s]       |                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.373s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:16:64:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KMyNode::create_publisher<<expression error> >(const char [17], int)[m[K’
+[1.373s]    16 |                 publisher_ = [01;31m[Kthis->create_publisher<msg::Twist>([m[K
+[1.373s]       |                              [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[1.373s]    17 | [01;31m[K                        "/turtle1/cmd_vel", 10)[m[K
+[1.373s]       |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K                 
+[1.373s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.373s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[1.373s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.373s]                  from [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:5[m[K:
+[1.373s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[1.373s]   195 |   [01;36m[Kcreate_publisher[m[K(
+[1.373s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.373s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.373s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:16:64:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.373s]    16 |                 publisher_ = [01;31m[Kthis->create_publisher<msg::Twist>([m[K
+[1.374s]       |                              [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[1.374s]    17 | [01;31m[K                        "/turtle1/cmd_vel", 10)[m[K
+[1.374s]       |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K                 
+[1.374s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:[m[K In member function ‘[01m[Kvoid MyNode::topic_callback(const String&)[m[K’:
+[1.374s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:25:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs[m[K’ has not been declared
+[1.374s]    25 |                 [01;31m[Kgeometry_msgs[m[K::Twist twist;
+[1.374s]       |                 [01;31m[K^~~~~~~~~~~~~[m[K
+[1.374s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:26:24:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+[1.374s]    26 |                 if (msg[01;31m[K->[m[Kdata.c_str() == "turn_right")
+[1.374s]       |                        [01;31m[K^~[m[K
+[1.374s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:28:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+[1.374s]    28 |                         [01;31m[Ktwist[m[K.angular.z = -1.5;
+[1.374s]       |                         [01;31m[K^~~~~[m[K
+[1.374s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:30:29:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+[1.374s]    30 |                 else if (msg[01;31m[K->[m[Kdata.c_str() == "turn_left")
+[1.374s]       |                             [01;31m[K^~[m[K
+[1.376s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:32:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+[1.376s]    32 |                         [01;31m[Ktwist[m[K.angular.z = 1.5;
+[1.376s]       |                         [01;31m[K^~~~~[m[K
+[1.376s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:34:29:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+[1.376s]    34 |                 else if (msg[01;31m[K->[m[Kdata.c_str() == "move_forward")
+[1.376s]       |                             [01;31m[K^~[m[K
+[1.379s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:36:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+[1.379s]    36 |                         [01;31m[Ktwist[m[K.linear.x = 1.0;
+[1.379s]       |                         [01;31m[K^~~~~[m[K
+[1.379s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:38:29:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+[1.379s]    38 |                 else if (msg[01;31m[K->[m[Kdata.c_str() == "move_backward")
+[1.379s]       |                             [01;31m[K^~[m[K
+[1.381s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:40:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+[1.381s]    40 |                         [01;31m[Ktwist[m[K.linear.x = -1.0;
+[1.381s]       |                         [01;31m[K^~~~~[m[K
+[1.383s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:43:37:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+[1.383s]    43 |                 publisher_->publish([01;31m[Ktwist[m[K);
+[1.384s]       |                                     [01;31m[K^~~~~[m[K
+[1.637s] gmake[2]: *** [CMakeFiles/control.dir/build.make:76: CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o] Error 1
+[1.637s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control.dir/all] Error 2
+[1.637s] gmake: *** [Makefile:146: all] Error 2
+[1.638s] Invoked command in '/home/apim/my_pubsub_ws/build/my_pubsub' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12

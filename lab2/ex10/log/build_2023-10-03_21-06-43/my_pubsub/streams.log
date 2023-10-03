@@ -1,0 +1,11 @@
+[0.030s] Invoking command in '/home/apim/my_pubsub_ws/build/my_pubsub': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12
+[0.052s] [35m[1mConsolidate compiler generated dependencies of target control[0m
+[0.061s] [ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o[0m
+[1.359s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:[m[K In constructor ‘[01m[KMyNode::MyNode()[m[K’:
+[1.359s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:21:36:[m[K [01;31m[Kerror: [m[K‘[01m[KMinimalSubscriber[m[K’ has not been declared
+[1.359s]    21 |                         std::bind(&[01;31m[KMinimalSubscriber[m[K::topic_callback, this, _1));
+[1.359s]       |                                    [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.797s] gmake[2]: *** [CMakeFiles/control.dir/build.make:76: CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o] Error 1
+[1.797s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control.dir/all] Error 2
+[1.797s] gmake: *** [Makefile:146: all] Error 2
+[1.799s] Invoked command in '/home/apim/my_pubsub_ws/build/my_pubsub' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12

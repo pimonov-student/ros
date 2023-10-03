@@ -1,0 +1,26 @@
+[0.031s] Invoking command in '/home/apim/my_pubsub_ws/build/my_pubsub': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12
+[0.054s] [35m[1mConsolidate compiler generated dependencies of target control[0m
+[0.064s] [ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o[0m
+[4.883s] [100%] [32m[1mLinking CXX executable control[0m
+[5.075s] [100%] Built target control
+[5.080s] Invoked command in '/home/apim/my_pubsub_ws/build/my_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12
+[5.098s] Invoking command in '/home/apim/my_pubsub_ws/build/my_pubsub': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/apim/my_pubsub_ws/build/my_pubsub
+[5.102s] -- Install configuration: ""
+[5.102s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/lib/my_pubsub/control
+[5.104s] -- Set runtime path of "/home/apim/my_pubsub_ws/install/my_pubsub/lib/my_pubsub/control" to ""
+[5.104s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/ament_index/resource_index/package_run_dependencies/my_pubsub
+[5.104s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/ament_index/resource_index/parent_prefix_path/my_pubsub
+[5.104s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/environment/ament_prefix_path.sh
+[5.104s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/environment/ament_prefix_path.dsv
+[5.104s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/environment/path.sh
+[5.104s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/environment/path.dsv
+[5.105s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/local_setup.bash
+[5.105s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/local_setup.sh
+[5.105s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/local_setup.zsh
+[5.105s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/local_setup.dsv
+[5.105s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/package.dsv
+[5.105s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/ament_index/resource_index/packages/my_pubsub
+[5.105s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/cmake/my_pubsubConfig.cmake
+[5.105s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/cmake/my_pubsubConfig-version.cmake
+[5.105s] -- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/package.xml
+[5.106s] Invoked command in '/home/apim/my_pubsub_ws/build/my_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/apim/my_pubsub_ws/build/my_pubsub

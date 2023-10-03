@@ -1,0 +1,4 @@
+Invoking command in '/home/apim/my_pubsub_ws/build/my_pubsub': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/apim/my_pubsub_ws/src/my_pubsub -DCMAKE_INSTALL_PREFIX=/home/apim/my_pubsub_ws/install/my_pubsub
+Invoked command in '/home/apim/my_pubsub_ws/build/my_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/apim/my_pubsub_ws/src/my_pubsub -DCMAKE_INSTALL_PREFIX=/home/apim/my_pubsub_ws/install/my_pubsub
+Invoking command in '/home/apim/my_pubsub_ws/build/my_pubsub': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12
+Invoked command in '/home/apim/my_pubsub_ws/build/my_pubsub' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12

@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target control[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o[0m
+[100%] [32m[1mLinking CXX executable control[0m
+[100%] Built target control
+-- Install configuration: ""
+-- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/lib/my_pubsub/control
+-- Set runtime path of "/home/apim/my_pubsub_ws/install/my_pubsub/lib/my_pubsub/control" to ""
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/ament_index/resource_index/package_run_dependencies/my_pubsub
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/ament_index/resource_index/parent_prefix_path/my_pubsub
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/environment/ament_prefix_path.sh
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/environment/path.sh
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/environment/path.dsv
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/local_setup.bash
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/local_setup.sh
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/local_setup.zsh
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/local_setup.dsv
+-- Installing: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/package.dsv
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/ament_index/resource_index/packages/my_pubsub
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/cmake/my_pubsubConfig.cmake
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/cmake/my_pubsubConfig-version.cmake
+-- Up-to-date: /home/apim/my_pubsub_ws/install/my_pubsub/share/my_pubsub/package.xml

@@ -1,0 +1,65 @@
+[0.031s] Invoking command in '/home/apim/my_pubsub_ws/build/my_pubsub': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12
+[0.054s] [35m[1mConsolidate compiler generated dependencies of target control[0m
+[0.064s] [ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o[0m
+[1.339s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:[m[K In constructor ‘[01m[KMyNode::MyNode()[m[K’:
+[1.339s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:16:68:[m[K [01;31m[Kerror: [m[K‘[01m[KTwist[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.339s]    16 |              publisher_ = this->create_publisher<std_msgs::msg::[01;31m[KTwist[m[K>(
+[1.339s]       |                                                                 [01;31m[K^~~~~[m[K
+[1.339s] 
+[1.339s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:16:74:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KMyNode::create_publisher<<expression error> >(const char [17], int)[m[K’
+[1.339s]    16 |              publisher_ = [01;31m[Kthis->create_publisher<std_msgs::msg::Twist>([m[K
+[1.339s]       |                           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[1.339s] 
+[1.340s]    17 |      [01;31m[K                "/turtle1/cmd_vel", 10)[m[K
+[1.340s]       |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K                           
+[1.340s] 
+[1.340s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.340s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[1.340s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.340s]                  from [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:5[m[K:
+[1.340s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[1.340s]   195 |   [01;36m[Kcreate_publisher[m[K(
+[1.340s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.340s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.340s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:16:74:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.340s]    16 |              publisher_ = [01;31m[Kthis->create_publisher<std_msgs::msg::Twist>([m[K
+[1.340s]       |                           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[1.340s] 
+[1.340s]    17 |      [01;31m[K                "/turtle1/cmd_vel", 10)[m[K
+[1.340s]       |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K                           
+[1.340s] 
+[1.340s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:[m[K In member function ‘[01m[Kvoid MyNode::topic_callback(const String&)[m[K’:
+[1.340s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:25:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs[m[K’ has not been declared
+[1.340s]    25 |                 [01;31m[Kgeometry_msgs[m[K::Twist twist;
+[1.340s]       |                 [01;31m[K^~~~~~~~~~~~~[m[K
+[1.340s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:26:24:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+[1.341s]    26 |                 if (msg[01;31m[K->[m[Kdata.c_str() == "turn_right")
+[1.341s]       |                        [01;31m[K^~[m[K
+[1.342s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:28:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+[1.342s]    28 |                         [01;31m[Ktwist[m[K.angular.z = -1.5;
+[1.342s]       |                         [01;31m[K^~~~~[m[K
+[1.342s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:30:29:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+[1.342s]    30 |                 else if (msg[01;31m[K->[m[Kdata.c_str() == "turn_left")
+[1.342s]       |                             [01;31m[K^~[m[K
+[1.345s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:32:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+[1.345s]    32 |                         [01;31m[Ktwist[m[K.angular.z = 1.5;
+[1.345s]       |                         [01;31m[K^~~~~[m[K
+[1.345s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:34:29:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+[1.345s]    34 |                 else if (msg[01;31m[K->[m[Kdata.c_str() == "move_forward")
+[1.345s]       |                             [01;31m[K^~[m[K
+[1.347s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:36:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+[1.347s]    36 |                         [01;31m[Ktwist[m[K.linear.x = 1.0;
+[1.347s]       |                         [01;31m[K^~~~~[m[K
+[1.347s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:38:29:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+[1.347s]    38 |                 else if (msg[01;31m[K->[m[Kdata.c_str() == "move_backward")
+[1.348s]       |                             [01;31m[K^~[m[K
+[1.350s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:40:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+[1.350s]    40 |                         [01;31m[Ktwist[m[K.linear.x = -1.0;
+[1.350s]       |                         [01;31m[K^~~~~[m[K
+[1.352s] [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:43:37:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+[1.352s]    43 |                 publisher_->publish([01;31m[Ktwist[m[K);
+[1.352s]       |                                     [01;31m[K^~~~~[m[K
+[1.603s] gmake[2]: *** [CMakeFiles/control.dir/build.make:76: CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o] Error 1
+[1.603s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control.dir/all] Error 2
+[1.604s] gmake: *** [Makefile:146: all] Error 2
+[1.605s] Invoked command in '/home/apim/my_pubsub_ws/build/my_pubsub' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/apim/my_pubsub_ws/build/my_pubsub -- -j12 -l12

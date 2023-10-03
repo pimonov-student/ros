@@ -1,0 +1,2 @@
+Invoking command in '/home/apim/my_pubsub_ws/build/my_pubsub': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/apim/my_pubsub_ws/src/my_pubsub -DCMAKE_INSTALL_PREFIX=/home/apim/my_pubsub_ws/install/my_pubsub
+Invoked command in '/home/apim/my_pubsub_ws/build/my_pubsub' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/apim/my_pubsub_ws/src/my_pubsub -DCMAKE_INSTALL_PREFIX=/home/apim/my_pubsub_ws/install/my_pubsub

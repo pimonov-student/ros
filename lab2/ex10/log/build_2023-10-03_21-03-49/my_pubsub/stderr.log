@@ -1,0 +1,43 @@
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:[m[K In constructor ‘[01m[KMyNode::MyNode()[m[K’:
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:21:36:[m[K [01;31m[Kerror: [m[K‘[01m[KMinimalSubscriber[m[K’ has not been declared
+   21 |                         std::bind(&[01;31m[KMinimalSubscriber[m[K::topic_callback, this, _1));
+      |                                    [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:[m[K In member function ‘[01m[Kvoid MyNode::topic_callback(const String&)[m[K’:
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:26:32:[m[K [01;31m[Kerror: [m[K‘[01m[KTwist[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::Twist[m[K’?
+   26 |                 geometry_msgs::[01;31m[KTwist[m[K twist;
+      |                                [01;31m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp:7[m[K,
+                 from [01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:6[m[K:
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:134:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::Twist[m[K’ declared here
+  134 | using [01;36m[KTwist[m[K =
+      |       [01;36m[K^~~~~[m[K
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:27:24:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+   27 |                 if (msg[01;31m[K->[m[Kdata.c_str() == "turn_right")
+      |                        [01;31m[K^~[m[K
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:29:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+   29 |                         [01;31m[Ktwist[m[K.angular.z = -1.5;
+      |                         [01;31m[K^~~~~[m[K
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:31:29:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+   31 |                 else if (msg[01;31m[K->[m[Kdata.c_str() == "turn_left")
+      |                             [01;31m[K^~[m[K
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:33:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+   33 |                         [01;31m[Ktwist[m[K.angular.z = 1.5;
+      |                         [01;31m[K^~~~~[m[K
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:35:29:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+   35 |                 else if (msg[01;31m[K->[m[Kdata.c_str() == "move_forward")
+      |                             [01;31m[K^~[m[K
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:37:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+   37 |                         [01;31m[Ktwist[m[K.linear.x = 1.0;
+      |                         [01;31m[K^~~~~[m[K
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:39:29:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst String[m[K’ {aka ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >[m[K’}
+   39 |                 else if (msg[01;31m[K->[m[Kdata.c_str() == "move_backward")
+      |                             [01;31m[K^~[m[K
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:41:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+   41 |                         [01;31m[Ktwist[m[K.linear.x = -1.0;
+      |                         [01;31m[K^~~~~[m[K
+[01m[K/home/apim/my_pubsub_ws/src/my_pubsub/src/text_to_cmd_vel.cpp:44:37:[m[K [01;31m[Kerror: [m[K‘[01m[Ktwist[m[K’ was not declared in this scope
+   44 |                 publisher_->publish([01;31m[Ktwist[m[K);
+      |                                     [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/control.dir/build.make:76: CMakeFiles/control.dir/src/text_to_cmd_vel.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
