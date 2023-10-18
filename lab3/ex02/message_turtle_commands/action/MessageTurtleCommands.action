@@ -1,0 +1,10 @@
+# goal definition
+string command              # "forward", "turn_left", "turn_right"
+int32 s                     # расстояние в метрах, которое должна проехать черепаха
+int32 angle                 # угол в градусах, на который должна повернуть черепаха
+---
+# result definition
+bool result                 # true - успех, false - неудача, возможно прервали
+---
+# feedback
+int32 odom                  # пройденное расстояние с момента начала выполнения команды
