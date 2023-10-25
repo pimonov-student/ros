@@ -21,7 +21,7 @@ public:
 	
 	// Конструктор класса, создает ноду "action_client"
 	TurtleActionClient(
-		std::vector<message_turtle_commands::action::MessageTurtleCommands::Goal> goals,
+		std::vector<TurtleAction::Goal> goals,
 		const rclcpp::NodeOptions& options = rclcpp::NodeOptions())
 	: Node("action_client", options)
 	{
@@ -46,7 +46,7 @@ public:
 	}
 	
 	// Функция, отправляет текущий goal
-	void send_goal(message_turtle_commands::action::MessageTurtleCommands::Goal goal)
+	void send_goal(TurtleAction::Goal goal)
 	{
 		using namespace std::placeholders;
 		
@@ -67,7 +67,7 @@ private:
 	// action client
 	rclcpp_action::Client<TurtleAction>::SharedPtr action_client_;
 	// Вектоор наших goal'ов
-	std::vector<message_turtle_commands::action::MessageTurtleCommands::Goal> goals_;
+	std::vector<TurtleAction::Goal> goals_;
 	// "Указатель" на текущий goal (его номер)
 	size_t curr_goal_ptr_;
 	
