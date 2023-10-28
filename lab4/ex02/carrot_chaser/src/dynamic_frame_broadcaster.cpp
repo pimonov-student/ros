@@ -16,8 +16,8 @@ public:
 	DynamicFrameBroadcaster()
 	: Node("dynamic_frame_broadcaser")
 	{
-		radius_ = this->declare_parameter<std::string>("radius");
-		direction_of_rotation_ = this->declare_parameter<std::string>("direction_of_rotation");
+		radius_ = this->declare_parameter<double>("radius");
+		direction_of_rotation_ = this->declare_parameter<int>("direction_of_rotation");
 		
 		tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
 		timer_ = this->create_wall_timer(
@@ -27,16 +27,14 @@ private:
 	rclcpp::TimerBase::SharedPtr timer_;
 	std::shared_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
 	
-	std::string radius_;
-	std::string direction_of_rotation_;
+	double radius_;
+	int direction_of_rotation_;
 	
 	void broadcast_timer_callback()
 	{
 		rclcpp::Time now = this->get_clock()->now();
 		
 		double x = 0.2 * now.seconds() * PI;
-		float radius = std::atof(radius_.c_str());
-		int direction_of_rotation = std::atoi(direction_of_rotation_.c_str());
 		
 		geometry_msgs::msg::TransformStamped t;
 		
@@ -44,8 +42,8 @@ private:
 		t.header.frame_id = "turtle1";
 		t.child_frame_id = "carrot1";
 		
-		t.transform.translation.x = radius * (direction_of_rotation == 1 ? sin(x) : cos(x));
-    	t.transform.translation.y = radius * (direction_of_rotation == 1? cos(x) : sin(x));
+		t.transform.translation.x = radius_ * (direction_of_rotation_ == 1 ? sin(x) : cos(x));
+    	t.transform.translation.y = radius_ * (direction_of_rotation_ == 1? cos(x) : sin(x));
     	t.transform.translation.z = 0.0;
     	
     	t.transform.rotation.x = 0.0;
@@ -53,7 +51,6 @@ private:
     	t.transform.rotation.z = 0.0;
     	t.transform.rotation.w = 1.0;
     	
-    	RCLCPP_INFO(this->get_logger(), "%f, %d", radius, direction_of_rotation);
     	tf_broadcaster_->sendTransform(t);
 	}
 };

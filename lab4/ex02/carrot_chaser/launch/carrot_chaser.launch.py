@@ -19,6 +19,15 @@ def generate_launch_description():
 	
 	return LaunchDescription([
 		base_nodes,
+		Node(
+			package='carrot_chaser',
+			executable='dynamic_frame_broadcaster',
+			name='dynamic_broadcaster',
+			parameters=[
+				{'radius': 2.0},
+				{'direction_of_rotation': 1}
+			]
+		),
 	])
 
 
