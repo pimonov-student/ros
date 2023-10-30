@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<robot name="simple_diff_drive">
+
+	<!-- Цвета -->
+	
+	<material name="green">
+		<color rgba="0 0.4 0.2 1"/>
+	</material>
+	<material name="dark_green">
+		<color rgba="0 0.05 0 1"/>
+	</material>
+	<material name="light_green">
+		<color rgba="0.9 1.0 0.9 1"/>
+	</material>
+	
+	<!-- База -->
+	
+	<link name="base_link">
+		<visual>
+			<geometry>
+				<cylinder radius="0.1" length="0.05"/>
+			</geometry>
+			<material name="green"/>
+		</visual>
+		<collision>
+			<geometry>
+				<cylinder radius="0.1" length="0.05"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="5"/>
+			<inertia ixx="0.0135" ixy="0" ixz="0" iyy="0.0135" iyz="0" izz="0.025"/>
+		</inertial>
+	</link>
+	
+	<!-- След от базы и связка -->
+	
+	<link name="base_footprint"/>
+	
+	<joint name="base_footprint_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="base_footprint"/>
+		<origin xyz="0 0 -0.0696" rpy="0 0 0"/>
+	</joint>
+	
+	<!-- Межбаза и связка с базой -->
+	
+	<link name="midbase_link">
+		<visual>
+			<geometry>
+				<cylinder radius="0.085" length="0.025"/>
+			</geometry>
+			<material name="light_green"/>
+		</visual>
+		<collision>
+			<geometry>
+				<cylinder radius="0.085" length="0.025"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="3"/>
+			<inertia ixx="0.0056" ixy="0" ixz="0" iyy="0.0056" iyz="0" izz="0.0108"/>
+		</inertial>
+	</link>
+	
+	<joint name="midbase_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="midbase_link"/>
+		<origin xyz="0 0 0.0375" rpy="0 0 0"/>
+	</joint>
+	
+	<!-- Надбаза и связка с базой -->
+	
+	<link name="upbase_link">
+		<visual>
+			<geometry>
+				<sphere radius="0.075"/>
+			</geometry>
+			<material name="green"/>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.075"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="3"/>
+			<inertia ixx="0.00675" ixy="0" ixz="0" iyy="0.00675" iyz="0" izz="0.00675"/>
+		</inertial>
+	</link>
+	
+	<joint name="upbase_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="upbase_link"/>
+		<origin xyz="0 0 0.025" rpy="0 0 0"/>
+	</joint>
+	
+	<!-- Голова базы и связка с базой -->
+	
+	<link name="head_link">
+		<visual>
+			<geometry>
+				<sphere radius="0.024"/>
+			</geometry>
+			<material name="light_green"/>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.024"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="0.5"/>
+			<inertia ixx="0.000115" ixy="0" ixz="0" iyy="0.000115" iyz="0" izz="0.000115"/>
+		</inertial>
+	</link>
+	
+	<joint name="head_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="head_link"/>
+		<origin xyz="0.1 0 0" rpy="0 0 0"/>
+	</joint>
+	
+	<!-- Передние лапки базы -->
+	
+	<link name="right_hand_link">
+		<visual>
+			<geometry>
+				<sphere radius="0.02"/>
+			</geometry>
+			<material name="light_green"/>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.02"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="0.25"/>
+			<inertia ixx="0.00004" ixy="0" ixz="0" iyy="0.00004" iyz="0" izz="0.00004"/>
+		</inertial>
+	</link>
+	
+	<link name="left_hand_link">
+		<visual>
+			<geometry>
+				<sphere radius="0.02"/>
+			</geometry>
+			<material name="light_green"/>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.02"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="0.25"/>
+			<inertia ixx="0.00004" ixy="0" ixz="0" iyy="0.00004" iyz="0" izz="0.00004"/>
+		</inertial>
+	</link>
+	
+	<!-- Связка передних лапок с базой -->
+	
+	<joint name="right_hand_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="right_hand_link"/>
+		<origin xyz="0.06 -0.08 0" rpy="0 0 0"/>
+	</joint>
+	
+	<joint name="left_hand_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="left_hand_link"/>
+		<origin xyz="0.06 0.08 0" rpy="0 0 0"/>
+	</joint>
+	
+	<!-- Задние лапки базы -->
+	
+	<link name="right_leg_link">
+		<visual>
+			<geometry>
+				<sphere radius="0.02"/>
+			</geometry>
+			<material name="light_green"/>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.02"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="0.25"/>
+			<inertia ixx="0.00004" ixy="0" ixz="0" iyy="0.00004" iyz="0" izz="0.00004"/>
+		</inertial>
+	</link>
+	
+	<link name="left_leg_link">
+		<visual>
+			<geometry>
+				<sphere radius="0.02"/>
+			</geometry>
+			<material name="light_green"/>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.02"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="0.25"/>
+			<inertia ixx="0.00004" ixy="0" ixz="0" iyy="0.00004" iyz="0" izz="0.00004"/>
+		</inertial>
+	</link>
+	
+	<!-- Связка задних лапок с базой -->
+	
+	<joint name="right_leg_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="right_leg_link"/>
+		<origin xyz="-0.08 -0.06 0" rpy="0 0 0"/>
+	</joint>
+	
+	<joint name="left_leg_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="left_leg_link"/>
+		<origin xyz="-0.08 0.06 0" rpy="0 0 0"/>
+	</joint>
+	
+	<!-- Ведущие колеса -->
+	
+	<link name="right_drive_link">
+		<visual>
+			<geometry>
+				<cylinder radius="0.04" length="0.025"/>
+			</geometry>
+			<material name="dark_green"/>
+		</visual>
+		<collision>
+			<geometry>
+				<cylinder radius="0.04" length="0.025"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="1"/>
+			<inertia ixx="0.00045" ixy="0" ixz="0" iyy="0.00045" iyz="0" izz="0.0008"/>
+		</inertial>
+	</link>
+	
+	<link name="left_drive_link">
+		<visual>
+			<geometry>
+				<cylinder radius="0.04" length="0.025"/>
+			</geometry>
+			<material name="dark_green"/>
+		</visual>
+		<collision>
+			<geometry>
+				<cylinder radius="0.04" length="0.025"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="1"/>
+			<inertia ixx="0.00045" ixy="0" ixz="0" iyy="0.00045" iyz="0" izz="0.0008"/>
+		</inertial>
+	</link>
+	
+	<!-- Связки ведущих колес с основой -->
+	
+	<joint name="base_right_drive_joint" type="continuous">
+		<parent link="base_link"/>
+		<child link="right_drive_link"/>
+		<origin xyz="-0.03 -0.058 -0.0246" rpy="1.5708 0 0"/>
+		<axis xyz="0 0 -1"/>
+	</joint>
+	
+	<joint name="base_left_drive_joint" type="continuous">
+		<parent link="base_link"/>
+		<child link="left_drive_link"/>
+		<origin xyz="-0.03 0.058 -0.0246" rpy="1.5708 0 0"/>
+		<axis xyz="0 0 -1"/>
+	</joint>
+	
+	<!-- Ведомое колесо и связка с базой -->
+	
+	<link name="front_driven_link">
+		<visual>
+			<geometry>
+				<sphere radius="0.0446"/>
+			</geometry>
+			<material name="dark_green"/>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.0446"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="2"/>
+			<inertia ixx="0.0016" ixy="0" ixz="0" iyy="0.0016" iyz="0" izz="0.0016"/>
+		</inertial>
+	</link>
+	
+	<joint name="base_driven_joint" type="fixed">
+		<parent link="base_link"/>
+		<child link="front_driven_link"/>
+		<origin xyz="0.04 0 -0.025" rpy="0 0 0"/>
+	</joint>
+
+</robot>
+
+
+
+
+
+
+
+
+
+
+
+
+
