@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+	<gazebo reference="head_link">
+  	<sensor name='depth' type='depth_camera'>
+  		<gz_frame_id>robot/head_link</gz_frame_id>
+    	<pose>0 0 0 0 0 0</pose>
+    	<update_rate>10</update_rate>
+    	<always_on>true</always_on>
+    	<camera>
+    		<horizontal_fov>1.51843645</horizontal_fov>
+    		<image>
+    			<width>848</width>
+    			<height>480</height>
+    			<format>R_FLOAT32</format>
+    		</image>
+    		<clip>
+    			<near>0.1</near>
+    			<far>10</far>
+    		</clip>
+    		<lens>
+    			<intrinsics>
+          	<fx>421.61578369140625</fx>
+          	<fy>421.61578369140625</fy>
+          	<cx>422.2854309082031</cx>
+          	<cy>236.57237243652344</cy>
+          	<s>0</s>
+        	</intrinsics>
+    		</lens>
+    	</camera>
+  	</sensor>
+	</gazebo>
+</robot>
