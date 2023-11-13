@@ -1,0 +1,277 @@
+<?xml version="1.0" ?>
+<robot name='robot' xmlns:xacro="http://ros.org/wiki/xacro">
+
+	<!-- Свойства объектов -->
+	
+	<!-- Размеры -->
+	
+	<xacro:property name="base_radius" value="0.1" />
+	<xacro:property name="base_height" value="0.05" />
+	<xacro:property name="base_weight" value="5" />
+	
+	<xacro:property name="midbase_radius" value="0.085" />
+	<xacro:property name="midbase_height" value="0.025" />
+	
+	<xacro:property name="upbase_radius" value="0.075" />
+	
+	<xacro:property name="head_radius" value="0.024" />
+	
+	<xacro:property name="limb_radius" value="0.02" />
+	<xacro:property name="limb_close_off" value="0.06" />
+	<xacro:property name="limb_far_off" value="0.08" />
+	
+	<xacro:property name="drive_radius" value="0.04" />
+	<xacro:property name="drive_height" value="0.025" />
+	<xacro:property name="drive_x_off" value="-0.03" />
+	<xacro:property name="drive_y_off" value="0.058" />
+	<xacro:property name="drive_z_off" value="${-(base_height/2)}" />
+	
+	<xacro:property name="driven_radius" value="0.04" />
+	<xacro:property name="driven_x_off" value="0.04" />
+	<xacro:property name="driven_z_off" value="${-(base_height/2)}" />
+	
+	<xacro:include filename="$(find robot_description)/urdf/diff_drive.urdf.xacro" />
+	<xacro:include filename="$(find robot_description)/urdf/lidar.urdf.xacro" />
+	<xacro:include filename="$(find robot_description)/urdf/depth_camera.urdf.xacro" />
+	
+	<!-- Цвета -->
+	
+	<material name="green">
+		<color rgba="0 0.4 0.2 1"/>
+	</material>
+	<material name="dark_green">
+		<color rgba="0 0.05 0 1"/>
+	</material>
+	<material name="light_green">
+		<color rgba="0.9 1.0 0.9 1"/>
+	</material>
+	
+	<!-- Joint'ы -->
+	
+	<xacro:macro name="joint" params="parent child type xyz rpy">
+		<joint name="${parent}_${child}_joint" type="${type}">
+			<parent link="${parent}_link"/>
+			<child link="${child}_link"/>
+			<origin xyz="${xyz}" rpy="${rpy}"/>
+		</joint>
+	</xacro:macro>
+	
+	<xacro:macro name="drive_joint" params="parent child type xyz rpy axis">
+		<joint name="${parent}_${child}_joint" type="${type}">
+			<parent link="${parent}_link"/>
+			<child link="${child}_link"/>
+			<origin xyz="${xyz}" rpy="${rpy}"/>
+			<axis xyz="${axis}"/>
+		</joint>
+	</xacro:macro>
+	
+	<!-- Link'и -->
+	
+	<xacro:macro name="cylinder_link" params="name radius length color mass">
+		<link name="${name}_link">
+			<visual>
+				<geometry>
+					<cylinder radius="${radius}" length="${length}"/>
+				</geometry>
+				<material name="${color}"/>
+			</visual>
+			<collision>
+				<geometry>
+					<cylinder radius="${radius}" length="${length}"/>
+				</geometry>
+			</collision>
+			<inertial>
+				<mass value="${mass}"/>
+				<inertia ixx="${(mass/12)*((3*radius*radius)+(length*length))}" 
+								 ixy="0" 
+								 ixz="0" 
+								 iyy="${(mass/12)*((3*radius*radius)+(length*length))}" 
+								 iyz="0" 
+								 izz="${(mass/2)*(radius*radius)}"/>
+			</inertial>	
+		</link>
+	</xacro:macro>
+	
+	<xacro:macro name="sphere_link" params="name radius color mass">
+		<link name="${name}_link">
+			<visual>
+				<geometry>
+					<sphere radius="${radius}"/>
+				</geometry>
+				<material name="${color}"/>
+			</visual>
+			<collision>
+				<geometry>
+					<sphere radius="${radius}"/>
+				</geometry>
+			</collision>
+			<inertial>
+				<mass value="${mass}"/>
+				<inertia ixx="${(2/5)*mass*(radius*radius)}"
+								 ixy="0" 
+								 ixz="0" 
+								 iyy="${(2/5)*mass*(radius*radius)}" 
+								 iyz="0" 
+								 izz="${(2/5)*mass*(radius*radius)}"/>
+			</inertial>
+		</link>
+	</xacro:macro>
+	
+	<!-- Объекты -->
+	
+	<!-- База -->
+	
+	<link name="base_link">
+		<visual>
+			<geometry>
+				<cylinder radius="${base_radius}" length="${base_height}"/>
+			</geometry>
+			<material name="green"/>
+			<origin xyz="0.03 0 0" rpy="0 0 0"/>
+		</visual>
+		<collision>
+			<geometry>
+				<cylinder radius="${base_radius}" length="${base_height}"/>
+			</geometry>
+			<origin xyz="0.03 0 0" rpy="0 0 0"/>
+		</collision>
+		<inertial>
+			<mass value="${base_weight}"/>
+			<inertia ixx="${(base_weight/12)*((3*base_radius*base_radius)+(base_height*base_height))}" 
+							 ixy="0" 
+							 ixz="0" 
+							 iyy="${(base_weight/12)*((3*base_radius*base_radius)+(base_height*base_height))}" 
+							 iyz="0" 
+							 izz="${(base_weight/2)*(base_radius*base_radius)}"/>
+			<origin xyz="0.03 0 0" rpy="0 0 0"/>
+		</inertial>	
+	</link>
+	
+	<!-- След от базы и связка с базой -->
+	
+	<link name="base_footprint_link"/>
+	
+	<xacro:joint parent="base" child="base_footprint" 
+							 type="fixed" 
+							 xyz="0.03 0 ${-((base_height/2)+driven_radius)}" rpy="0 0 0" />
+	
+	<!-- Межбаза и связка с базой -->
+	
+	<xacro:cylinder_link name="midbase" 
+											 radius="0.085" length="0.025" 
+											 color="light_green" 
+											 mass="3" />
+	
+	<xacro:joint parent="base" child="midbase" 
+							 type="fixed" 
+							 xyz="0.03 0 ${(base_height+midbase_height)/2}" rpy="0 0 0" />
+	
+	<!-- Надбаза и связка с базой -->
+	
+	<xacro:sphere_link name="upbase"
+					  				 radius="${upbase_radius}"
+					  				 color="green"
+					  				 mass="3" />
+	
+	<xacro:joint parent="base" child="upbase"
+							 type="fixed"
+							 xyz="0.03 0 ${base_height/2}" rpy="0 0 0" />
+	
+	<!-- Голова базы и связка с базой -->
+	
+	<link name="head_link">
+		<visual>
+			<geometry>
+				<sphere radius="${head_radius}"/>
+			</geometry>
+			<material name="light_green"/>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="${head_radius}"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="0.5"/>
+			<inertia ixx="${(2/5)*0.5*(head_radius*head_radius)}"
+							 ixy="0" 
+							 ixz="0" 
+							 iyy="${(2/5)*0.5*(head_radius*head_radius)}" 
+							 iyz="0" 
+							 izz="${(2/5)*0.5*(head_radius*head_radius)}"/>
+		</inertial>
+	</link>
+	
+	<xacro:joint parent="base" child="head"
+							 type="fixed"
+							 xyz="${base_radius+0.03} 0 0" rpy="0 0 0" />
+	
+	<!-- Лапки базы и связки -->
+	
+	<xacro:sphere_link name="right_hand"
+					  				 radius="${limb_radius}"
+					  				 color="light_green"
+					  				 mass="0.25" />
+	<xacro:sphere_link name="left_hand"
+					  				 radius="${limb_radius}"
+					  				 color="light_green"
+					  				 mass="0.25" />
+	<xacro:sphere_link name="right_leg"
+					  				 radius="${limb_radius}"
+					  				 color="light_green"
+					  				 mass="0.25" />
+	<xacro:sphere_link name="left_leg"
+					  				 radius="${limb_radius}"
+					  				 color="light_green"
+					  				 mass="0.25" />
+	
+	<xacro:joint parent="base" child="right_hand"
+							 type="fixed"
+							 xyz="${limb_close_off+0.03} ${-limb_far_off} 0" rpy="0 0 0" />
+	<xacro:joint parent="base" child="left_hand"
+							 type="fixed"
+							 xyz="${limb_close_off+0.03} ${limb_far_off} 0" rpy="0 0 0" />
+	<xacro:joint parent="base" child="right_leg"
+							 type="fixed"
+							 xyz="${-limb_far_off+0.03} ${-limb_close_off} 0" rpy="0 0 0" />
+	<xacro:joint parent="base" child="left_leg"
+							 type="fixed"
+							 xyz="${-limb_far_off+0.03} ${limb_close_off} 0" rpy="0 0 0" />
+	
+	<!-- Ведущие колеса и связки с базой -->
+	
+	<xacro:cylinder_link name="right_drive" 
+											 radius="0.04" length="0.025" 
+											 color="dark_green" 
+											 mass="1" />
+	<xacro:cylinder_link name="left_drive" 
+											 radius="0.04" length="0.025" 
+											 color="dark_green" 
+											 mass="1" />
+	
+	<xacro:drive_joint parent="base" child="right_drive"
+					  				 type="continuous" 
+					  				 xyz="${drive_x_off+0.03} ${-drive_y_off} ${drive_z_off}" rpy="${pi/2} 0 0"
+					  				 axis="0 0 -1" />
+	<xacro:drive_joint parent="base" child="left_drive"
+					  				 type="continuous" 
+					  				 xyz="${drive_x_off+0.03} ${drive_y_off} ${drive_z_off}" rpy="${pi/2} 0 0"
+					  				 axis="0 0 -1" />
+	
+	<!-- Ведомое колесо и связка с базой -->
+	
+	<xacro:sphere_link name="driven"
+					  				 radius="${driven_radius}"
+					  				 color="dark_green"
+					  				 mass="2" />
+	
+	<xacro:joint parent="base" child="driven"
+							 type="fixed"
+							 xyz="${driven_x_off+0.03} 0 ${-(base_height/2)}" rpy="0 0 0" />
+	
+	<gazebo reference="driven_link">
+  	<mu1 value="0.001"/>
+    <mu2 value="0.001"/>
+  </gazebo>
+
+</robot>
