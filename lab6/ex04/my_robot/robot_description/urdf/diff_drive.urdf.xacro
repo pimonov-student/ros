@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+	<gazebo>
+	<plugin
+    	filename="gz-sim-joint-state-publisher-system"
+      name="gz::sim::systems::JointStatePublisher">
+    </plugin>
+    <plugin
+    	filename="gz-sim-diff-drive-system"
+      name="gz::sim::systems::DiffDrive">
+      <left_joint>base_left_drive_joint</left_joint>
+      <right_joint>base_right_drive_joint</right_joint>
+      <child_frame_id>robot/base_link</child_frame_id>
+      <wheel_separation>${2.435*drive_y_off}</wheel_separation>
+      <wheel_radius>${drive_radius}</wheel_radius>
+      <odom_publish_frequency>144</odom_publish_frequency>
+    </plugin>
+  </gazebo>
+</robot>
